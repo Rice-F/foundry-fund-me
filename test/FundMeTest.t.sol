@@ -10,6 +10,7 @@ contract FundMeTest is Test {
 
     // 钩子函数，在每个测试函数之前自动执行
     function setUp() external {
+        // fundMe = new FundMe(0x694AA1769357215DE4FAC081bf1f309aDC325306);
         DeployFundMe deployFundMe = new DeployFundMe();
         fundMe = deployFundMe.run(); // 返回一个合约
     }
