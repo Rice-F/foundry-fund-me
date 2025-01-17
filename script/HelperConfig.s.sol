@@ -39,6 +39,7 @@ contract HelperConfig is Script {
     }
 
     function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
+        // address(0) => 0地址，无效地址，空地址
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;
         }
